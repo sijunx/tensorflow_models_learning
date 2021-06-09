@@ -31,7 +31,7 @@ def net_evaluation(sess,loss,accuracy,val_images_batch,val_labels_batch,val_nums
     val_max_steps = int(val_nums / batch_size)
     val_losses = []
     val_accs = []
-    for _ in xrange(val_max_steps):
+    for _ in range(val_max_steps):
         val_x, val_y = sess.run([val_images_batch, val_labels_batch])
         # print('labels:',val_y)
         # val_loss = sess.run(loss, feed_dict={x: val_x, y: val_y, keep_prob: 1.0})
